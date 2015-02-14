@@ -1,0 +1,534 @@
+
+@import "includes/reset.less";
+
+
+/*========================
+GLOBAL
+=========================*/
+
+*, *:before, *:after {
+        -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+body, html {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ background-color: #1e1e1e;
+}
+
+
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1, h2, p, span, a {
+    font-family: "museo-sans", helvetica, sans-serif;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color:#48B1FC;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+q {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 10px;
+    border-radius: 2px;
+    border:1px dashed #444;
+    font-style: italic;
+    font-size: .9em;
+    line-height: 1.3em;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.width_limit {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+/*========================
+NAV
+=========================*/
+
+nav {
+    display: none;
+}
+
+
+/*========================
+INTRO CONTAINER
+=========================*/
+
+
+.intro_container {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    height: 100%;
+    background: url('../images/oldskool.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+     text-align: center;
+}
+
+a.button {
+    display: block;
+    padding: 12px 10px 10px;
+    width: 280px;
+    margin: 10px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    text-decoration: none;
+    color:#eee;
+
+    &:hover{
+        background-color: rgba(245, 245, 245, 0.4);
+        color: #111;
+    }
+}
+
+
+.badge_container {
+    width: 100%;
+    position: absolute;
+    top: 8%;
+    text-align: center;
+}
+
+.intro_badge {
+    display: inline-block;
+    width: 85%;
+    height: 300px;
+    background: url('../images/logo.png') no-repeat center;
+    background-size: 260px 260px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*========================
+IMAGE INTRO BANNER CONTENT
+=========================*/
+
+.background_content {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 350px;
+    color: #fff;
+    margin: 0 auto 0 auto;
+    z-index: 98;
+    text-align: center;
+}
+
+.background_content h1 {
+    font-size: 2em;
+    width: 85%;
+    position: relative;
+    top: 40%;
+    color: white;
+    padding: 0;
+    border: 0;
+    display: inline-block;
+}
+
+.background_content h1 span {
+    color: white;
+    border-bottom: 8px solid #fff;
+}
+
+.background_content:nth-of-type(2) {
+    background: url('../images/4wd.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: 70% 50%;
+}
+
+.background_content:nth-of-type(4) {
+    background: url('../images/celi.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: 70% 50%;
+}
+
+
+/*========================
+DESCRIPTION BODY CONTENT
+=========================*/
+
+
+.description_content {
+    width: 100%;
+    color:#fff;
+    margin: 0 auto 0 auto;
+    z-index: 99;
+    position: relative;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 28px;
+    font-weight: 900;
+    width: 225px;
+    letter-spacing: 0.040em;
+    border: 8px solid #2f2e2f;
+    display: inline-block;
+    padding: 7px 16px;
+    margin: 0;
+}
+
+ .description_body {
+    margin: 45px auto;
+    max-width: 93%;
+
+    p{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.020em;
+        margin: 0 0 20px 0;
+        line-height: 1.6em;
+    }
+
+    ul{
+        float: left;
+        width: 50%;
+
+        li{
+            margin-bottom: 10px;
+        }
+
+        .h3{
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+    }
+
+}
+
+.rating > span:before {
+   content: "\2605";
+   color: yellow;
+   position: absolute;
+}
+
+.rating > span.empty:before {
+   content: "";
+   color: yellow;
+}
+
+.reviews ul {
+    float: none;
+    width: 100%;
+    margin-bottom: 30px;
+    li{
+        font-size: 1.2em;
+        margin-bottom: 15px;
+
+        .source {
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+
+/*========================
+FIRST FOOTER CONTENT
+=========================*/
+
+.first_footer {
+    margin: 60px 0;
+    background-color: #1e1e1e;
+    width: 100%;
+    text-align: center;
+    padding: 1px 0;
+}
+
+
+
+/*========================
+MEDIA QUERIES TABLET
+=========================*/
+
+
+@media (min-width: 400px) {
+    .intro_container {
+        height: 100%;
+    }
+
+    .badge_container {
+        top: 30%;
+    }
+
+    .background_content h1 {
+        top: 33%;
+    }
+}
+
+/*========================
+MEDIA QUERIES TABLET
+=========================*/
+
+@media (min-width: 660px) {
+
+    .intro_container {
+        height: 100%;
+    }
+
+    /*========================
+    NAV
+    =========================*/
+        nav {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 55px;
+        z-index: 100;
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e1e;
+        text-align: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .main-nav {
+        padding: 0;
+        margin: 18px auto 0 auto;
+    }
+
+    .main-nav li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 29px 0 29px;
+    }
+
+    .logo a,
+    .main-nav a {
+            font-size: 0.75000em;
+            font-weight: 700;
+            letter-spacing: 0.250em;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            text-align: center;
+            padding: 2px 0;
+            transition: color 0.3s ease-in-out;
+    }
+
+    .main-nav a:hover {
+        color: #6c8f34;
+    }
+
+
+    .badge_container {
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        text-align: center;
+    }
+
+
+    /*========================
+    DESCRIPTION BODY CONTENT
+    =========================*/
+
+
+    .description_body {
+        margin: 45px auto;
+        padding: 15px;
+        max-width: 500px;
+        height: 315px;
+    }
+
+    h1 {
+        font-size: 35px;
+        font-weight: 900;
+        width: 280px;
+        letter-spacing: 0.040em;
+        border: 9px solid #2f2e2f;
+    }
+
+     .description_body p {
+        font-size: 1.060em;
+        font-weight: 500;
+        letter-spacing: 0.020em;
+        margin: 0 0 25px 0;
+    }
+
+
+    /*========================
+    IMAGE INTRO BANNER CONTENT
+    =========================*/
+
+    .background_content {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: 570px;
+        margin: 0 auto 0 auto;
+        z-index: 98;
+        text-align: center;
+    }
+
+    .background_content h1 {
+        font-size: 4.5em;
+        position: relative;
+        top: 41%;
+        width: 85%;
+        color: white;
+        padding: 0;
+        border: 0;
+        display: inline-block;
+    }
+
+    .background_content h1 span {
+        color: white;
+        padding: 0;
+        border-bottom: 10px solid #fff;
+    }
+
+} /*END OF MEDIA QUERY*/
+
+/*========================
+MEDIA QUERIE DESKTOP
+=========================*/
+
+
+@media (min-width: 1100px) {
+
+    .intro_container {
+        background-attachment: fixed;
+    }
+
+
+    .logo {
+        width: 300px;
+        height: 44px;
+        background: url('../images/logo-small.png') no-repeat center;
+        background-size: 100%;
+        display: inline-block;
+        float: left;
+        margin: 5px 0 0 25px;
+    }
+
+
+    .logo a,
+    .main-nav a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 3px 1px;
+    }
+
+    .main-nav {
+        float: right;
+        padding: 0;
+        margin: 0;
+        margin: 18px 20px 0 0;
+    }
+
+    .main-nav li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 32px 0 32px;
+    }
+
+
+
+        /*========================
+    BACKGROUND CONTENT
+    =========================*/
+
+
+    .background_content h1 {
+        font-size: 5em;
+        position: relative;
+        top: 41%;
+        width: 100%;
+        color: white;
+        padding: 0;
+        border: 0;
+        display: inline-block;
+    }
+
+    .background_content h1 span {
+        color: white;
+        padding: 0;
+        border-bottom: 12px solid #fff;
+    }
+
+        /*========================
+    DESCRIPTION BODY CONTENT
+    =========================*/
+    .background_content:nth-of-type(2),
+    .background_content:nth-of-type(4) {
+        background-attachment: fixed;
+    }
+
+    .description_content {
+        padding: 45px 0 45px 0;
+    }
+
+
+    .description_body {
+        max-width: 450px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0;
+
+    }
+
+    h1 {
+        font-size: 37px;
+        font-weight: 900;
+        width: 296px;
+        letter-spacing: 0.040em;
+        border: 9px solid #2f2e2f;
+    }
+
+     .description_body p {
+        font-size: 0.960em;
+        font-weight: 500;
+        letter-spacing: 0.020em;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 25px 0;
+    }
+
+}
+
+
+
