@@ -1,10 +1,13 @@
 # charleys
 
 ## requirements:
-- node.js (http://nodejs.org/)
-- bower (http://bower.io/)
+
+-   node.js (http://nodejs.org/)
+-   bower (http://bower.io/)
 
 ## run:
-- npm install
-- bower install
-- gulp (serve to run locally dist to run remote)
+
+-   npm install
+-   npm run watch for dev
+-   npm run build to build locally for testing
+-   npm run ship to build and publish to surge.sh
